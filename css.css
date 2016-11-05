@@ -1,0 +1,18 @@
+body {height:2000px;}
+#box1,#box2 { border:1px solid #aaa; border-radius: 10px; padding:10px; margin:20px;  }
+#box1 label { line-height: 34px; }
+#form { display:none; }
+#form1 { height:95px; }
+#box2,#box1 { padding-bottom:30px; }
+#box1 button, #box1 .add, #box1 .load,  { width:77px; margin:5px 0 8px 0; }
+.btn1 { width:160px; margin-top:20px;}
+#select span { display:block; width:282px;}
+#table ,#table th { text-align: center; }
+.wrap1, .wrap2 {  width:450px; border:1px solid #ccc; border-radius: 6px; line-height: 34px;
+			 margin:10px auto; padding:25px 0px 0px 55px; position:relative; left:22px; }
+#changeform { display:none; }
+.search { position: relative; width:266px; float:right; margin-bottom:3px;}
+.search span { font:700 14px/1.43 "Helvetica Neue";  }
+#config { display:inline-block; font-weight: 700; width:194px; height:28px; border:2px solid #9a9a9a; border-bottom-color:#eee; border-right-color:#eee; padding:1px; border:; margin-left:3px;}
+.search i {position: absolute; bottom: 8px; right: 12px; top: auto; cursor: pointer;}
+/*.fixclear { content:''; display:block; clear:both; }*/

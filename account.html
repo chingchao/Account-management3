@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<link rel="stylesheet" href="dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css.css">
+	<link rel="stylesheet" href="dist/css/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="dataTables/jquery.dataTables.css">
+	<script src='dist/js/jquery-3.1.0.js'></script>
+	<script type="text/javascript" charset="utf8" src="dataTables/jquery.js"></script>
+	<script type="text/javascript" charset="utf8" src="dataTables/jquery.dataTables.js"></script>
+	<script src='dist/js/bootstrap.js'></script>
+	<script src="js.js"></script>
+	<script src='dist/js/select2.full.js'></script>
+	<link rel="stylesheet" href="dist/js/daterangepicker.css">
+	<script src='dist/js/moment.min.js'></script>
+	<script src='dist/js/daterangepicker.js'></script>
+</head>
+<body>
+	<div class="container">
+		<div id="box1" >
+		<p class='h3 text-center'>登录/添加</p> <br>
+			<div class="wrap1">
+				<form action="" id="form1" role="form">
+					<div class="row" >
+						<div class="col-md-2 text-right" >
+							<label for="name" > 名称 :</label>
+						</div>
+						<div class="col-md-8">
+							<input type="text" class="form-control" class="col-md-10" id="name" name='name'>
+						</div>  
+					</div>
+					<div class="row">
+						<div class="col-md-2 text-right">
+						</div>
+						<div class="col-md-8" id="btn">
+							<input class="btn btn-primary load " id="load" type="button" value='登录'>
+							<input type="button" name="" class="btn btn-primary add"  value= "添加" > 
+						</div> 
+					</div>
+				</form>
+
+				<form id="form" role="form" >
+					<div class="form-group" >
+						<!-- <div class="row" >
+							<div class="col-md-5 text-right" >
+								<label for="name" > 名称 :</label>
+							</div>
+							<div class="col-md-3">
+								<input type="text" class="form-control" class="col-md-10" id="name" name='name'>
+							</div>  
+						</div> -->
+						
+							<div id="add">
+								<div class="row" >
+									<div class="col-md-2 text-right" >
+										<label for="name" > 名称 :</label>
+									</div>
+									<div class="col-md-8">
+										<input type="text" class="form-control" class="col-md-10" id="name" name='name'>
+									</div>  
+								</div>
+								<div class="row">
+										<div class="col-md-2 text-right" >
+										<label for="num" > 编码 :</label>
+									</div>
+									<div class="col-md-8">
+										<input type="text" class="form-control"  id="num" name="num">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-2 text-right" >
+										<label for="type" > 类型 :</label>
+									</div> 
+									<div class="col-md-8">
+										<select style="width:100%;" name="type" id="select"></select>
+									</div>  
+								</div>
+								<div class="row">
+										<div class="col-md-2 text-right" >
+										<label for="remarks" > 备注 :</label>
+									</div>
+									<div class="col-md-8">
+										<input type="text" class="form-control"  id="remarks" name="remarks">
+									</div>
+								</div>
+								<!-- <div class="row">
+										<div class="col-md-5 text-right" >
+										<label for="state" > 状态 :</label>
+									</div>
+									<div class="col-md-3">
+										<label class="checkbox-inline">
+											<input type="radio" name="state" id="optionsRadios3" value="option1" checked> on-line
+										</label>
+										<label class="checkbox-inline">
+											<input type="radio" name="state" id="optionsRadios4"  value="option2"> off-line
+										</label>
+									</div>
+								</div> -->
+								<div class="row">
+									<div class="col-md-2 text-right">
+									</div> 
+									<div class="col-md-10">
+										<input type="button" class="btn btn-primary " value= "确认添加" id="submit">
+										<input type="button" class="btn btn-primary " value= "返回登录" id="onload">
+									</div>
+								</div>
+								
+								
+							</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="box2">
+			<p class="h3 text-center">账户列表</p>
+			<div class="search fixclear">
+	            <form action="" role='form'>
+	            	<span>注册时间:</span>
+	            	<input type="text" id="config" class="">
+		            <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+	            </form>
+	        </div>
+	        <p></p>
+			<table id="table" class="display center">
+				<thead>
+					<tr>
+						<th>名称</th>
+						<th>编码</th>
+						<th>类型</th>
+						<th>备注</th>
+						<th>状态</th>
+						<th>最后登录时间</th>
+						<th>注册时间</th>
+					</tr>
+				</thead>
+				
+	         </div>
+			</table>
+			
+			<div id="changeform" class="wrap2">
+				<form id="form3" role="form" >
+					<div class="form-group" >
+						<div class="row" >
+							<div class="col-md-2 text-right" >
+								<label for="name" > 名称 :</label>
+							</div>
+							<div class="col-md-8">
+								<input type="text" class="form-control" value=""  name='name'>
+							</div>  
+						</div>
+						<div class="row">
+							<div class="col-md-2 text-right" >
+								<label for="num" > 编码 :</label>
+							</div>
+							<div class="col-md-8">
+								<input type="text" class="form-control"   name="num">
+							</div>
+						</div>	
+						<div class="row">
+							<div class="col-md-2 text-right" >
+								<label for="type" > 类型 :</label>
+							</div> 
+							<div class="col-md-8">
+								<select style="width:100%;" name="type" id="select2" ></select>
+							</div>  
+						</div>
+						<div class="row">
+								<div class="col-md-2 text-right" >
+								<label for="remarks" > 备注 :</label>
+							</div>
+							<div class="col-md-8">
+								<input type="text" class="form-control"   name="remarks">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-2 text-right" >
+								<label for="state" > 状态 :</label>
+							</div>
+							<div class="col-md-8">
+								<label class="checkbox-inline">
+									<input type="radio" name="state" value="on-line" checked> on-line
+								</label>
+								<label class="checkbox-inline">
+									<input type="radio" name="state" value="off-line" > off-line
+								</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-2"></div>
+							<div class="col-md-8">
+								<input type="button" id="changeBtn" class="btn btn-primary" value="确认修改">
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<form action="" id="form2">
+				<div class="row">
+					<div class="col-md-5 text-right">
+					</div> 
+					<div class="col-md-2 btn1"  >
+						<input type="button" class="btn btn-primary " value= "删除" id="delete">
+						<input type="button" class="btn btn-primary " value= "修改" id="change">
+					</div>
+				</div>
+			</form>
+			
+		</div>
+	</div>
+	
+</body>
+</html>
